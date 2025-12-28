@@ -43,6 +43,8 @@ This module addresses these issues by providing:
 
 ## 🗂️ Directory Structure
 
+```text
+
 Seg-to-Yolo-format/
 │
 ├── converter.py
@@ -70,7 +72,8 @@ Seg-to-Yolo-format/
     └── visualizer_data/
         └── image_visualized_with_polygons.jpg
             (Final visualization result)
-
+            
+```
 ---
 
 ## 🔍 Step 1 — Inspect Mask Colors (mask_rgb_picker.py)
