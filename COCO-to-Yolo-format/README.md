@@ -39,7 +39,7 @@ This module bridges that gap by:
 
 ## 🗂️ Directory Structure
 
-"""
+```text
 COCO-to-Yolo-format/
 │
 ├── converter.py
@@ -63,7 +63,7 @@ COCO-to-Yolo-format/
     │
     └── image_visualized_with_bboxes.jpg
         (Visualization of YOLO bounding boxes)
-"""
+```
 
 ---
 
@@ -78,7 +78,7 @@ with the following main sections:
 
 ### 📥 Example (`example.json` – simplified)
 
-"""
+```text
 {
   "images": [
     {
@@ -106,7 +106,7 @@ with the following main sections:
     }
   ]
 }
-"""
+```
 
 Where:
 - `bbox = [xmin, ymin, width, height]` in **pixel coordinates**
@@ -134,18 +134,18 @@ For each image in the COCO JSON:
 
 Each image produces a `.txt` file with one line per object:
 
-"""
+```text
 <class_id> <x_center> <y_center> <width> <height>
-"""
+```
 
 All values are **normalized to [0, 1]**.
 
 ### 📤 Example (`example.txt`)
 
-"""
+```
 0 0.772656 0.795833 0.092188 0.280556
 0 0.637500 0.687963 0.062500 0.301852
-"""
+```
 
 This output is directly compatible with YOLO training pipelines.
 
@@ -170,9 +170,9 @@ This helps verify:
 
 ### Step 1 — Convert COCO to YOLO
 
-"""
+```text
 python converter.py
-"""
+```
 
 This will:
 - Read COCO JSON files from `input/json/`
@@ -183,9 +183,9 @@ This will:
 
 ### Step 2 — Visualize YOLO Annotations
 
-"""
+```text
 python visualizer.py
-"""
+```
 
 This will generate:
 - `image_visualized_with_bboxes.jpg`
@@ -200,9 +200,9 @@ This will generate:
 
 Installation:
 
-"""
+```text
 pip install opencv-python numpy
-"""
+```
 
 ---
 
