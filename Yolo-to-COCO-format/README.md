@@ -43,7 +43,7 @@ This module bridges that gap by:
 
 ## 🗂️ Directory Structure
 
-"""
+```text
 Yolo-to-COCO-format/
 │
 ├── main.py
@@ -68,7 +68,7 @@ Yolo-to-COCO-format/
 └── output/
     └── dataset_coco.json
         (Generated COCO-format annotation file)
-"""
+```
 
 ---
 
@@ -78,9 +78,9 @@ YOLO annotations are stored in `.txt` files, one per image.
 
 Each line follows the format:
 
-"""
+```text
 <class_id> <x_center> <y_center> <width> <height>
-"""
+```
 
 Where:
 - Coordinates are **normalized to [0, 1]**
@@ -89,10 +89,10 @@ Where:
 
 ### 📥 Example (`example.txt`)
 
-"""
+```text
 0 0.512 0.487 0.182 0.264
 1 0.732 0.401 0.098 0.143
-"""
+```
 
 ---
 
@@ -119,7 +119,7 @@ The generated COCO file contains three main sections:
 
 ### 📤 Example (`dataset_coco.json` – excerpt)
 
-"""
+```
 {
   "images": [
     {
@@ -148,7 +148,7 @@ The generated COCO file contains three main sections:
     }
   ]
 }
-"""
+```
 
 This output is fully compatible with COCO-based training and evaluation pipelines.
 
@@ -160,15 +160,15 @@ This output is fully compatible with COCO-based training and evaluation pipeline
 
 If no arguments are provided, the script automatically uses:
 
-"""
+```text
 input/dataset.txt
-"""
+```
 
 Run:
 
-"""
+```text
 python main.py
-"""
+```
 
 ---
 
@@ -176,9 +176,9 @@ python main.py
 
 You can override the default input:
 
-"""
+```text
 python main.py --path input/dataset.txt --output dataset_coco.json
-"""
+```
 
 ---
 
@@ -186,9 +186,9 @@ python main.py --path input/dataset.txt --output dataset_coco.json
 
 To visually inspect bounding boxes and annotation values:
 
-"""
+```text
 python main.py --path input/dataset.txt --debug
-"""
+```
 
 This opens images with drawn bounding boxes and prints annotation details to the console.
 
@@ -207,12 +207,6 @@ This opens images with drawn bounding boxes and prints annotation details to the
 
 ---
 
-## 🖼️ Example Input Image
-
-![Input Image](input/dataset/example.jpg)
-
----
-
 ## 📦 Requirements
 
 ### Python Version
@@ -220,9 +214,9 @@ This opens images with drawn bounding boxes and prints annotation details to the
 
 ### Required Packages
 
-"""
+```text
 pip install numpy opencv-python imagesize
-"""
+```
 
 No deep learning frameworks are required.
 
