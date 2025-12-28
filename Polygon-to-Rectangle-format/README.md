@@ -42,7 +42,7 @@ This module bridges that gap by:
 
 ## 🗂️ Directory Structure
 
-"""
+```text
 Polygon-to-Rectangle-format/
 │
 ├── converter.py
@@ -66,7 +66,7 @@ Polygon-to-Rectangle-format/
 └── visualizer_data/
     └── image_visualized_with_bboxes.jpg
         (Final visualization result)
-"""
+```
 
 ---
 
@@ -89,10 +89,10 @@ The conversion process follows these steps:
 
 ### 📥 Input: Polygon Annotation (`data/mask.txt`)
 
-"""
+```
 0 0.12 0.34 0.18 0.36 0.20 0.40 0.15 0.42
 1 0.55 0.60 0.58 0.62 0.61 0.65 0.57 0.67
-"""
+```
 
 Each line represents:
 - `class_id`
@@ -103,10 +103,10 @@ Each line represents:
 
 ### 📤 Output: YOLO Bounding Box (`converter/mask.txt`)
 
-"""
+```
 0 0.16 0.38 0.08 0.08
 1 0.59 0.63 0.06 0.07
-"""
+```
 
 Each line now represents:
 - `class_id`
@@ -134,9 +134,9 @@ This ensures:
 
 Run the conversion script:
 
-"""
+```bash
 python converter.py
-"""
+```
 
 What this script does:
 - Reads polygon annotations from `data/`
@@ -149,9 +149,9 @@ What this script does:
 
 To verify the conversion, run:
 
-"""
+``` bash
 python visualizer.py
-"""
+```
 
 This script:
 - Loads the original image
@@ -182,9 +182,9 @@ This script:
 
 ### Required Packages
 
-"""
+```bash
 pip install opencv-python matplotlib numpy
-"""
+```
 
 No deep learning frameworks are required.
 
